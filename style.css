@@ -1,0 +1,433 @@
+html{
+    font-size: 18px;
+    background-color: #f9f9f9;
+}
+
+@font-face {
+  font-family: 'Capital Daren';
+  src: url('Fonts/Capital%20daren/capital%20daren%20regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+body{
+  font-family: 'Palanquin', Inconsolata;
+  font-weight: 400;
+  padding: 2rem;
+  text-align: left;
+  margin-left: 8rem;
+  margin-right: 8rem;
+    }
+
+h2{
+  font-family: 'Capital Daren';
+  font-size: 45px;
+}
+
+#about, #education, #experience, #projects {
+  margin-bottom: 3rem;
+}
+  
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    color: #f2f2f2;
+    padding: 2rem;
+    margin-right: -2rem;
+}
+
+.left-nav .prenom-nom {
+    font-size: 1rem;
+    color: #000000;
+    margin-left: -2rem;
+}
+
+.right-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.right-nav ul li {
+    margin: 0 1rem;
+}
+
+.right-nav ul li a {
+    color: #000000;
+}
+
+#home h1 {
+  font-size: 45px;
+  font-family: 'Palanquin', Inconsolata;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/*Icones social media*/
+#socials {
+  margin-top: -3rem;
+  padding: 2rem;
+  margin-left: -2.3rem;
+  margin-right: 2.8rem;
+}
+
+.socialmedia i {
+  width: 25px;  /* Largeur fixe pour le cercle */
+  height: 25px;  /* Hauteur fixe pour le cercle */
+  line-height: 25px;  /* Centre verticalement */
+  font-size: 13px;  
+  text-align: center;
+  background-color: #333;
+  color: white;  
+  border-radius: 55%;  
+  padding: 5px;
+  margin: 5px; 
+  font-size: 20px;
+}
+
+/*About*/
+
+
+.about-content {
+  display: flex;
+  align-items: left;
+}
+
+.about-image {
+  border-radius: 50%;
+  width: 70vw; /* Largeur relative à la taille de la fenêtre */
+  height: 70vw; /* Hauteur relative à la taille de la fenêtre */
+  max-width: 250px; /* Taille maximale pour les grands écrans */
+  max-height: 250px; /* Taille maximale pour les grands écrans */
+  margin-right: 3rem;
+  object-fit: cover;
+}
+.about-text {
+  max-width: 70%; /* ajuste cela en fonction de la largeur disponible */
+}
+
+.about-text p {
+  margin-bottom: 0rem; 
+}
+
+@media (max-width: 800px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center; /* Centrer les éléments dans le conteneur */
+    margin-left: -4rem;
+    margin-right: -6rem;
+  }
+
+  .about-image, .about-text {
+    width: 100%; /* Les éléments occupent toute la largeur */
+  }
+  .about-image {
+    width: 70vw; /* Taille plus grande relative pour les petits écrans */
+    height: 70vw; /* Taille plus grande relative pour les petits écrans */
+    max-width: 200px; /* Taille maximale ajustée pour les petits écrans */
+    max-height: 200px; /* Taille maximale ajustée pour les petits écrans */
+  }
+  
+}
+
+/* Section Éducation */
+
+#education {
+  text-align: left;
+}
+
+.education-entry {
+  display: flex;
+  align-items: top;
+  margin-bottom: 1rem;
+}
+
+.dates {
+  margin-right: 2rem; 
+  white-space: nowrap; 
+}
+
+.school-degree {
+  display: flex;
+  flex-direction: column; /* Organise le nom de l'école et le diplôme verticalement */
+}
+
+.school-name {
+  font-weight: bold;
+}
+
+.degree {
+  margin-top: 0.5rem;
+}
+
+.content{
+  margin-top: 0.5rem;
+  text-align: left;
+  font-size: 16px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #333;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+/*My Experience*/
+
+.experience-entry .Company {
+  font-family: 'Capital Daren';
+  font-size: 22px;
+  margin-bottom: 0.7rem;
+}
+
+.experience-entry h4 {
+  margin-bottom: 0.5rem; 
+  margin-top: 0.5rem; 
+
+}
+
+.XPdates{
+  font-family:'Barlow condensed';
+  margin-top: 0.5rem;
+}
+
+.experience-entry p {
+  font-size: 16px;
+}
+
+.experience-entry p {
+  font-size: 16px;
+}
+
+.company-and-date {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+/* Grille pour les entrées d'expérience */
+.experience-grid {
+  flex-wrap: wrap; 
+  display: flex;
+}
+.experience-grid::after {
+  content: "";
+  flex: 1 1 calc(50% - 0.4rem); /* Même taille que les autres éléments .experience-entry */
+  margin: 0.2rem;
+}
+
+/* Style des rectangles noirs */
+.experience-entry {
+  background-color: transparent;
+  flex: 1 1 calc(50% - 0.4rem); /* Prend la moitié de l'espace disponible, en tenant compte de la marge */
+  border: 2px solid #333;
+  padding: 1rem;
+  margin: 0.2rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  float: left; /* Flotte les éléments à gauche pour les aligner côte à côte */
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .experience-entry {
+    flex-basis: 100%; /* Chaque entrée occupe toute la largeur disponible */
+    height: auto; /* Hauteur basée sur le contenu */
+  }
+}
+
+/* Projects Section */
+
+
+.projects-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  }
+}
+
+
+.projects-images .image-container img {
+  display: block;
+  width: 100%; /* Assure que l'image remplit le conteneur */
+  height: auto;
+  border-radius: 15px;
+}
+
+.projects-images .image-container {
+  position: relative;
+  display: inline-block;
+  margin: 2px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.projects-images img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.projects-images .image-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.image-title {
+  font-family: 'Capital Daren', 'Palanquin', Inconsolata;
+  font-size: 60px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.small-images-container {
+  display: flex;
+  flex-direction: column; /* Place les images de manière verticale */
+}
+
+.projects-images .image-container:hover img {
+  filter: brightness(30%) blur(5px);
+}
+
+.projects-images .image-container:hover .image-title {
+  opacity: 1;
+}
+
+
+.projects-images .branding-image {
+  width: 31vw; 
+  height: 21.52vw;
+}
+
+.projects-images .nocode-image {
+  width: 22vw;
+  height: 8.27vw;
+}
+
+.projects-images .licensing-image {
+  width: 22.05vw;
+  height: 12.40vw;
+}
+
+.projects-images .game-image {
+  width: 17vw;
+  height: 21.52vw;
+}
+
+.projects-images .podcast-image {
+  width: 26vw;
+  height: 19vw;
+}
+
+.projects-images .writing3-image {
+  width: 26vw;
+  height: 13.1vw;
+}
+
+.projects-images .tweet-image {
+  width: 44vw;
+  height: 32.38vw;
+}
+
+.projects-images .dataviz-image {
+  width: 70.2vw; 
+  height: 18.60vw;
+}
+
+.projects-images .writing-image {
+  width: 17vw;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .projects-images .branding-image, 
+  .projects-images .dataviz-image, 
+  .projects-images .game-image, 
+  .projects-images .nocode-image, 
+  .projects-images .podcast-image, 
+  .projects-images .writing3-image, 
+  .projects-images .tweet-image, 
+  .projects-images .licensing-image, 
+  .projects-images .writing-image {
+    width: 100%; /* Ajuste la largeur pour les petits écrans */
+    height: auto; /* Hauteur ajustée automatiquement pour maintenir les proportions */
+  }
+}
+
+
+/*PAGES*/ 
+.category{
+  margin-top: 2rem;
+}
+
+.category p{
+  margin-top: -0.7rem;
+}
+
+/* Navigation Bar */
+#branding-navbar {
+    display: flex;
+    justify-content: space-between;
+    color: #f2f2f2;
+    padding: 2rem;
+    margin-right: -2rem;
+}
+
+.left-nav .prenom-nom {
+    font-size: 1rem;
+    color: #000000;
+    margin-left: -2rem;
+}
+
+.right-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.right-nav ul li {
+    margin: 0 1rem;
+}
+
+.right-nav ul li a {
+    color: #000000;
+}
+
+
+.about-licensing ul{
+  margin-top: -0.8rem;  
+  margin-bottom: 1.5rem;
+}
+
+.espacement {
+  margin-top: -0.3rem;  
+}
